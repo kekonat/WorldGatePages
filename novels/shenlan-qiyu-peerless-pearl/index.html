@@ -1,11 +1,95 @@
-<main>
-  <p>
-    Official English fan translation of
-    <strong>Shenlan Qiyu: Peerless Pearl</strong>.
-  </p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <title>Shenlan Qiyu: Peerless Pearl | World Gate</title>
+  <link rel="canonical" href="/novels/shenlan-qiyu-peerless-pearl/" />
+
+  <style>
+    body {
+      max-width: 720px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      color: #111;
+    }
+
+    header { margin-bottom: 2rem; }
+    h1 { margin: 0.5rem 0 1rem; font-size: 1.75rem; }
+
+    a { color: #0056b3; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    ul { padding-left: 1.2rem; }
+    li { margin: 0.5rem 0; }
+
+    /* Read/unread styling */
+    a.chapter-link strong { font-weight: 700; }
+    a.chapter-link.read strong { font-weight: 400; }
+    a.chapter-link.read { opacity: 0.78; }
+
+    /* Last-read highlight */
+    a.chapter-link.last-read {
+      outline: 2px solid #ddd;
+      border-radius: 8px;
+      padding: 0.15rem 0.35rem;
+      margin-left: -0.35rem;
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      font-size: 0.9rem;
+      color: #444;
+      border-top: 1px solid #ddd;
+      padding-top: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <nav>
+    <a href="/">World Gate Home</a>
+  </nav>
+  <h1>Shenlan Qiyu: Peerless Pearl</h1>
+  <p>Unofficial fan translation. One chapter released per day.</p>
+</header>
+
+<main>
   <h2>Chapters</h2>
   <ul id="chapter-list">
-    <!-- Chapters will be inserted/generated here -->
+    <li><a class="chapter-link" data-chapter-no3="089" href="/novels/shenlan-qiyu-peerless-pearl/chapters/ch089-ruby-arrives.html"><strong>Chapter 89</strong></a></li>
   </ul>
 </main>
+
+<footer>
+  <p>
+    Support the translation on
+    <a href="https://www.patreon.com/" target="_blank" rel="noopener">Patreon</a>.
+  </p>
+</footer>
+
+<script>
+  // Read-tracking keys are locked by book slug.
+  const bookSlug = "shenlan-qiyu-peerless-pearl";
+  const lastReadKey = `lastRead:${bookSlug}`;
+  const lastRead = localStorage.getItem(lastReadKey);
+
+  document.querySelectorAll("a.chapter-link").forEach(a => {
+    const ch = a.getAttribute("data-chapter-no3");
+    const readKey = `read:${bookSlug}:${ch}`;
+    if (localStorage.getItem(readKey) === "1") {
+      a.classList.add("read");
+    }
+    if (lastRead && lastRead === ch) {
+      a.classList.add("last-read");
+    }
+  });
+</script>
+
+</body>
+</html>
