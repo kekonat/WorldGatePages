@@ -32,14 +32,6 @@
     a.chapter-link.read strong { font-weight: 400; }
     a.chapter-link.read { opacity: 0.78; }
 
-    /* Last-read highlight */
-    a.chapter-link.last-read {
-      outline: 2px solid #ddd;
-      border-radius: 8px;
-      padding: 0.15rem 0.35rem;
-      margin-left: -0.35rem;
-    }
-
     footer {
       margin-top: 2.5rem;
       font-size: 0.9rem;
@@ -62,10 +54,10 @@
 <main>
   <h2>Chapters</h2>
   <ul id="chapter-list">
-    <li><a class="chapter-link" data-chapter-no3="089" href="chapters/ch089-ruby-arrives.html"><strong>Chapter 89: Ruby Arrives</strong></a></li>
-<li><a class="chapter-link" data-chapter-no3="090" href="chapters/ch090-the-fierce-princess.html"><strong>Chapter 90: The Fierce Princess</strong></a></li>
+    <li><a class="chapter-link" data-chapter-no3="092" href="chapters/ch092-the-angry-princess.html"><strong>Chapter 92: The Angry Princess</strong></a></li>
 <li><a class="chapter-link" data-chapter-no3="091" href="chapters/ch091-for-the-glory-of-humans.html"><strong>Chapter 91: For the Glory of Humans</strong></a></li>
-<li><a class="chapter-link" data-chapter-no3="092" href="chapters/ch092-the-angry-princess.html"><strong>Chapter 92: The Angry Princess</strong></a></li>
+<li><a class="chapter-link" data-chapter-no3="090" href="chapters/ch090-the-fierce-princess.html"><strong>Chapter 90: The Fierce Princess</strong></a></li>
+<li><a class="chapter-link" data-chapter-no3="089" href="chapters/ch089-ruby-arrives.html"><strong>Chapter 89: Ruby Arrives</strong></a></li>
   </ul>
 </main>
 
@@ -87,9 +79,6 @@
     const readKey = `read:${bookSlug}:${ch}`;
     if (localStorage.getItem(readKey) === "1") {
       a.classList.add("read");
-    }
-    if (lastRead && lastRead === ch) {
-      a.classList.add("last-read");
     }
   });
 </script>
