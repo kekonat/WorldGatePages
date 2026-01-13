@@ -54,6 +54,12 @@
       font-size: 0.95rem;
     }
 
+    .chapter-nav .disabled {
+      color: #777;
+      text-decoration: none;
+      cursor: default;
+    }
+
     footer {
       font-size: 0.9rem;
       color: #444;
@@ -129,8 +135,8 @@
 </main>
 
 <nav class="chapter-nav">
-  <a href="">← Previous Chapter</a>
-  <a href="">Next Chapter →</a>
+  <span class="disabled">← Previous Chapter</span>
+  <span class="disabled">Next Chapter →</span>
 </nav>
 
 <footer>
