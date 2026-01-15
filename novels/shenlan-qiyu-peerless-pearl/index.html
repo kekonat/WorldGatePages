@@ -9,33 +9,33 @@
 
   <style>
     body {
-        max-width: 720px;
-        margin: 2rem auto;
-        padding: 0 1rem;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont,
-                    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        line-height: 1.7;
+      max-width: 720px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
 
-        background-color: #0d0f12;
-        color: #d4d4d4;
+      background-color: #0d0f12;
+      color: #d4d4d4;
     }
 
     header { margin-bottom: 2rem; }
 
-    h1 { 
-        margin: 0.5rem 0 1rem; 
-        font-size: 1.75rem; 
-        color: #e0e0e0;
+    h1 {
+      margin: 0.5rem 0 1rem;
+      font-size: 1.75rem;
+      color: #e0e0e0;
     }
 
     h2 {
-        color: #e0e0e0;
-        margin-top: 1.5rem;
+      color: #e0e0e0;
+      margin-top: 1.5rem;
     }
 
-    a { 
-        color: #7fb7ff;
-        text-decoration: none;
+    a {
+      color: #7fb7ff;
+      text-decoration: none;
     }
     a:hover { text-decoration: underline; }
 
@@ -52,9 +52,10 @@
     }
 
     .chapter-date {
-        color: #9aa4b2;
-        opacity: 0.85;
-        font-size: 0.95em;
+      color: #9aa4b2;
+      opacity: 0.85;
+      font-size: 0.95em;
+      white-space: nowrap;
     }
 
     ::selection {
@@ -72,22 +73,57 @@
     }
     .book-credits div { margin: 0.15rem 0; }
 
-    /* Make headings and text more compact inside early-chapters */
-    .early-chapters h2 {
-        font-size: 1.15rem;
-        margin-top: 1rem;
-        margin-bottom: 0.4rem;
+    /* Collapsible blocks (summary styled to match h2) */
+    details.collapsible {
+      margin-top: 1rem;
+      border: 1px solid #2a2d33;
+      border-radius: 10px;
+      background: #11141a;
+      padding: 0.75rem 1rem;
     }
 
-    .early-chapters p {
-        font-size: 0.95rem;
-        line-height: 1.55;
+    summary.collapsible-summary {
+      cursor: pointer;
+      list-style: none;
+
+      /* Match h2 look */
+      color: #e0e0e0;
+      font-size: 1.5rem; /* roughly default h2 size */
+      font-weight: 700;
+      margin: 0;
+    }
+
+    summary.collapsible-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary.collapsible-summary::before {
+      content: "▶";
+      display: inline-block;
+      width: 1.25rem;
+      margin-right: 0.25rem;
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+
+    details.collapsible[open] summary.collapsible-summary::before {
+      content: "▼";
+    }
+
+    .collapsible-body {
+      margin-top: 0.75rem;
+    }
+
+    .collapsible-body p {
+      margin: 0.6rem 0;
+      font-size: 0.95rem;
+      line-height: 1.55;
     }
 
     .courtesy-note {
-        margin-top: 0.75rem;
-        font-size: 0.9rem;
-        opacity: 0.85;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      opacity: 0.85;
     }
 
     /* Read/unread styling */
@@ -96,11 +132,11 @@
     a.chapter-link.read { opacity: 0.6; }
 
     footer {
-        font-size: 0.9rem;
-        color: #a8a8a8;
-        border-top: 1px solid #2a2d33;
-        padding-top: 1.5rem;
-        margin-top: 2.5rem;
+      font-size: 0.9rem;
+      color: #a8a8a8;
+      border-top: 1px solid #2a2d33;
+      padding-top: 1.5rem;
+      margin-top: 2.5rem;
     }
   </style>
 </head>
@@ -121,53 +157,49 @@
     <div><strong>Original Work:</strong> 神澜奇域无双珠</div>
   </div>
 
-  <details class="early-chapters">
-  <summary>
-    <h2>Chapters 1–88 (shunshunrika)</h2>
-  </summary>
+  <details class="collapsible">
+    <summary class="collapsible-summary">Chapters 1–88 (shunshunrika)</summary>
 
-  <div class="early-chapters-body">
-    <h2>Chapters 1–88 (shunshunrika)</h2>
+    <div class="collapsible-body">
+      <p>
+        This site continues from Chapter 89. For Chapters 1–88, please read the earlier fan translation by
+        <strong>shunshunrika</strong>.
+      </p>
 
-    <p>
-      This site continues from Chapter 89. For Chapters 1–88, please read the earlier fan translation by
-      <strong>shunshunrika</strong>.
-    </p>
+      <p>
+        <a href="https://queenofhearts0.wordpress.com/2023/05/28/summary/" target="_blank" rel="noopener">
+          Read Chapters 1–88 by shunshunrika
+        </a>
+      </p>
 
-    <p>
-      <a href="https://queenofhearts0.wordpress.com/2023/05/28/summary/" target="_blank" rel="noopener">
-        Read Chapters 1–88 by shunshunrika
-      </a>
-    </p>
-
-    <p class="courtesy-note">
-      If the original translator wishes to continue this work at any point, this project would gladly step
-      aside in respect of the original translation.
-    </p>
-
+      <p class="courtesy-note">
+        If the original translator wishes to continue this work at any point, this project would gladly step
+        aside in respect of the original translation.
+      </p>
     </div>
-    <details class="early-chapters">
-    <summary>
-        <h2>Why This Continuation Exists</h2>
-    </summary>
-    <p>
-      After catching up to Chapter 88, I was devastated to see that the original fan translation had stopped
-      updating as of June 8, 2025. I love Tang San’s works too much to leave one of his stories unfinished.
-    </p>
+  </details>
 
-    <p>
-      This project was started so readers could continue the adventure beyond that point. Care has been taken
-      to keep terminology as consistent as possible with shunshunrika’s translation, with a small number of
-      adjustments made to better align with the official translation of
-      <em>Douluo Dalu 5: Rebirth of Tang San</em>.
-    </p>
+  <details class="collapsible">
+    <summary class="collapsible-summary">Why This Continuation Exists</summary>
 
-    <p>
-      May this continuation carry the same excitement, emotion, and sense of discovery as the journey unfolds.
-    </p>
-  </div>
-</details>
+    <div class="collapsible-body">
+      <p>
+        After catching up to Chapter 88, I was devastated to see that the original fan translation had stopped
+        updating as of June 8, 2025. I love Tang San’s works too much to leave one of his stories unfinished.
+      </p>
 
+      <p>
+        This project was started so readers could continue the adventure beyond that point. Care has been taken
+        to keep terminology as consistent as possible with shunshunrika’s translation, with a small number of
+        adjustments made to better align with the official translation of
+        <em>Douluo Dalu 5: Rebirth of Tang San</em>.
+      </p>
+
+      <p>
+        May this continuation carry the same excitement, emotion, and sense of discovery as the journey unfolds.
+      </p>
+    </div>
+  </details>
 </header>
 
 <main>
