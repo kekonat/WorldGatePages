@@ -88,6 +88,18 @@
         </div>
       </header>
 
+      <section class="latest-chapter">
+        <span class="latest-label">Latest chapter</span>
+        <a 
+          href="chapters/ch092-the-angry-princess.html" 
+          class="latest-link"
+          data-latest-no3="092"
+        >
+          Chapter 92 — Chapter 92: The Angry Princess
+        </a>
+        <span class="latest-date">2026-01-14</span>
+      </section>
+
       <main>
         <h2>Chapters</h2>
         <ul id="chapter-list">
@@ -137,8 +149,8 @@
           <span class="contact-email">worldgate.contact [at] gmail [dot] com</span>
         </p>
         <p>
-          Support the translation on
-          <a href="https://www.patreon.com/" target="_blank" rel="noopener">Patreon</a>.
+          If you enjoy the translation, you can support the project on
+          <a href="https://patreon.com/WorldGateTranslations" target="_blank" rel="noopener">Patreon →</a>
         </p>
       </footer>
 
@@ -152,6 +164,15 @@
             a.classList.add("read");
           }
         });
+
+        const latest = document.querySelector(".latest-link");
+        if (latest) {
+          const no3 = latest.getAttribute("data-latest-no3");
+          const readKey = `read:${bookSlug}:${no3}`;
+          if (no3 && localStorage.getItem(readKey) === "1") {
+            latest.classList.add("read");
+          }
+        }
       </script>
 
     </div>
