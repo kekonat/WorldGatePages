@@ -359,3 +359,7 @@ body.wg-bg .home-hero p {
   padding-top: 1.25rem;
   border-top: 1px solid rgba(255,255,255,0.08);
 }
+
+.giscus {
+  opacity: 0.95;
+}
