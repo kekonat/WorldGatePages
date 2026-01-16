@@ -353,3 +353,9 @@ body.wg-bg .home-hero p {
 .site-nav-sep {
   opacity: 0.35;
 }
+
+.wg-comments {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
