@@ -297,8 +297,9 @@ body.wg-bg .home-hero p {
 
 /* Readable panel (~80% width, capped) */
 .wg-panel {
-  width: min(84vw, 980px);
+  width: min(72vw, 750px);
   margin: 0 auto;
+
   padding:
     clamp(28px, 4vh, 40px)
     clamp(32px, 4vw, 44px)
