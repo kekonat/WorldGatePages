@@ -99,21 +99,29 @@ li.chapter-item {
 }
 .book-credits div { margin: 0.15rem 0; }
 
+/* ===== Book hero layout (GRID) ===== */
 .book-hero {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
   gap: 1.25rem;
-  align-items: flex-start;
+  align-items: start;
+  width: 100%;
 }
 
 .book-hero-main {
-  flex: 1 1 auto;
   min-width: 0;
 }
 
 .book-hero-aside {
-  flex: 0 0 auto;
+  justify-self: end;
 }
 
+/* Full-width row under BOTH columns (for collapsibles) */
+.book-hero-wide {
+  grid-column: 1 / -1;
+}
+
+/* Cover image */
 .book-cover {
   display: block;
   width: 220px;
@@ -125,8 +133,13 @@ li.chapter-item {
 /* Responsive: stack on small screens */
 @media (max-width: 780px) {
   .book-hero {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
+
+  .book-hero-aside {
+    justify-self: center;
+  }
+
   .book-cover {
     width: 240px;
     max-width: 100%;
